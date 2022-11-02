@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>NIP</th>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Photo</th>
+                        <th>Email</th>
+                        <th>Fakultas</th>
+                        <th>Prodi</th>
+                        <th>Alamat</th>
+                    </tr>
+                </thead>
+                <body>
+                    {% for dosen in dosen %}
+                    <tr>
+                        <td>{{ dosen.NIP }}</td>
+                        <td>{{ dosen.nama }}</td>
+                        <td>{{ dosen.tl }}</td>
+                        <td>{{ dosen.photo }}</td>
+                        <td>{{ dosen.email }}</td>
+                        <td>{{ dosen.fakultas }}</td>
+                        <td>{{ dosen.prodi }}</td>
+                        <td>{{ dosen.alamat }}</td>
+                    </tr>
+                    {% endfor %}
+                </body>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

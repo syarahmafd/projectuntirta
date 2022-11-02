@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+    <center><h2>FAKULTAS KEGURUAN & ILMU PENDIDIKAN </h2></center>
+    <h3>Terdiri dari :</h3>
+    {% for jurusan in title %}
+    <li>{{jurusan}}</li>
+    {% endfor %}
+{% endblock %}
